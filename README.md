@@ -2,7 +2,7 @@
 
 This app is list of rick and morty cartoon series.
 
-#Demo
+# Demo
 
 ![Demo1](https://s1.gifyu.com/images/Screen-Recording-2022-08-29-at-01.07.21.gif)
 ![Demo2](https://s1.gifyu.com/images/Screen-Recording-2022-08-29-at-01.06.15.gif)
