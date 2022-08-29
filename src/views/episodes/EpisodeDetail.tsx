@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useCallback } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { useGetEpisodeQuery } from '../../api/services/episodes/episodeService';
 import CharacterSpecificList from '../../components/characters/CharacterSpecificList';
@@ -9,12 +9,15 @@ const EpisodeDetail: FC<RouteComponentProps<{ id?: string | undefined }>> = (pro
   const { id } = match.params;
   const { data: episode } = useGetEpisodeQuery({ id });
 
-  const getCharacterIds = (characters?: string[]) =>
-    characters?.map((item: string) => {
-      const itemSplit = item?.split('/');
+  const getCharacterIds = useCallback(
+    (characters?: string[]) =>
+      characters?.map((item: string) => {
+        const itemSplit = item?.split('/');
 
-      return itemSplit[itemSplit.length - 1];
-    });
+        return itemSplit[itemSplit.length - 1];
+      }),
+    []
+  );
 
   return (
     <PageLayout title={episode?.name} subTitle={episode?.episode}>
