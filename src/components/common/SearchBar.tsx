@@ -30,12 +30,14 @@ function SearchBar<T>(props: SearchBarProps<T>) {
 
           if (Array.isArray(explodeWithTwoPoint) && explodeWithTwoPoint.length > 1) {
             search?.setItems(
-              originalData?.filter(
-                (__item) =>
-                  //eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                  //@ts-ignore
-                  __item[explodeWithTwoPoint[0].substring(1)]?.toLowerCase() === explodeWithTwoPoint[1].toLowerCase()
-              )
+              originalData?.filter((__item) => {
+                const itemKey = explodeWithTwoPoint[0].substring(1);
+                const itemValue = explodeWithTwoPoint[1];
+
+                //eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                //@ts-ignore
+                return __item[itemKey]?.toLowerCase() === itemValue;
+              })
             );
           }
 
