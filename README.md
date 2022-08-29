@@ -2,7 +2,7 @@
 
 This app is list of rick and morty cartoon series.
 
-#Demo
+# Demo
 
 ![Demo1](https://s1.gifyu.com/images/Screen-Recording-2022-08-29-at-01.07.21.gif)
 ![Demo2](https://s1.gifyu.com/images/Screen-Recording-2022-08-29-at-01.06.15.gif)
@@ -49,6 +49,11 @@ Let's install nodejs with nvm
 Detail information: https://github.com/nvm-sh/nvm
 
 ### Project Installation
+```
+git clone https://github.com/Ecancan/RickAndMorty.git
+mv .env.example .env
+```
+Change env app url with https://rickandmortyapi.com/api
 ```
 yarn install
 yarn start
