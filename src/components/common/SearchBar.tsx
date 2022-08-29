@@ -36,7 +36,7 @@ function SearchBar<T>(props: SearchBarProps<T>) {
 
                 //eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 //@ts-ignore
-                return __item[itemKey]?.toLowerCase() === itemValue;
+                return __item[itemKey]?.toLowerCase() === itemValue.toLowerCase();
               })
             );
           }
