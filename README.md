@@ -50,6 +50,11 @@ Detail information: https://github.com/nvm-sh/nvm
 
 ### Project Installation
 ```
+git clone https://github.com/Ecancan/RickAndMorty.git
+mv .env.example .env
+```
+Change env app url with https://rickandmortyapi.com/api
+```
 yarn install
 yarn start
 yarn talwind:watch (on new terminal)
