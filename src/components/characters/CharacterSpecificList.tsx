@@ -1,7 +1,7 @@
+import { SearchBar } from '@ecancan/react-generic-search-bar';
 import React, { FC, useEffect, useState } from 'react';
 import { Character } from '../../api/services/characters/characterInterface';
 import { useLazyGetSpecificCharactersQuery } from '../../api/services/characters/characterService';
-import SearchBar from '../common/SearchBar';
 import CharacterCard from './character-components/CharacterCard';
 
 const CharacterSpecificList: FC<{ ids?: Array<string> }> = (props) => {
@@ -19,10 +19,9 @@ const CharacterSpecificList: FC<{ ids?: Array<string> }> = (props) => {
   return (
     <div className={'flex flex-col'}>
       <SearchBar<Character>
-        search={{ items: characters, setItems: setCharacters }}
-        originalData={results}
+        items={results}
         placeholderText={'Search and filter. Eg. /gender:male /species:alien ...'}
-        isSorting
+        onResult={(_items) => setCharacters(_items)}
       />
       <div className={'w-full xl:columns-3 md:columns-3 sm:columns-2 columns-1'}>
         {characters?.map((item, index) => (

@@ -17,6 +17,7 @@
     "talwind:watch": "npx tailwindcss -i ./src/index.css -o ./src/tailwind.css --watch"
   },
   "dependencies": {
+    "@ecancan/react-generic-search-bar": "^0.1.2",
     "@loadable/component": "^5.15.2",
     "@reduxjs/toolkit": "^1.8.3",
     "assert": "2.0.0",
